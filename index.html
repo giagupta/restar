@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container" id="mainContent" style="display: none">
+      <h1>Take a Break</h1>
+      <div class="break-buttons">
+        <button class="gradient-button" id="fiveMinuteButton">
+          Start 5-Minute Break
+        </button>
+        <button class="gradient-button" id="tenMinuteButton">
+          Start 10-Minute Break
+        </button>
+      </div>
+      <div class="editBreak">
+        <button class="gradient-button" id="resetBreak">Reset</button>
+        <button class="gradient-button" id="pauseResumeButtonBreak">
+          Pause
+        </button>
+      </div>
+      <button class="gradient-button" id="chooseNewBreak">
+        Choose New Break
+      </button>
+      <button class="gradient-button" id="returnToTimer">
+        Return to Timer
+      </button>
+      <iframe id="breakFrame" src="" frameborder="0"></iframe>
+      <div id="breakTimer" class="timer">05:00</div>
+      <div id="breakProgress" class="progress-bar"></div>
+    </div>
+
+    <div id="breathingContainer" class="breathing-container">
+      <div class="breathing-circle"></div>
+    </div>
+
+    <div id="timerContainer" class="timer-container">
+      <div id="timer" class="timer">25:00</div>
+      <div class="timer-buttons">
+        <button
+          class="gradient-button"
+          onclick="startTimer(25, 5);choosingTimer('five')"
+        >
+          Start 25:00 Timer
+        </button>
+        <button
+          class="gradient-button"
+          onclick="startTimer(50, 10);choosingTimer('ten')"
+        >
+          Start 50:00 Timer
+        </button>
+      </div>
+      <div class="editTimer">
+        <button class="gradient-button" id="reset">Reset</button>
+        <button class="gradient-button" id="pauseResumeButton">Pause</button>
+      </div>
+      <div id="workProgress" class="progress-bar"></div>
+      <button class="gradient-button" id="startBreakNow">
+        Start Break Now
+      </button>
+    </div>
+
+    <audio id="timerSound" src="alarm.mp3"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
